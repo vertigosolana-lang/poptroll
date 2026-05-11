@@ -122,10 +122,6 @@ navCta.addEventListener('mouseenter', () => {
     }, 600);
   }
 });
-navCta.addEventListener('click', (e) => {
-  e.preventDefault();
-  toast("can't buy yet ser, we haven't launched 🐸");
-});
 
 // --- COPY CA ---
 const copyBtn = document.getElementById('copyBtn');
