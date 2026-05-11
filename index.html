@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>$POPTROLL — the chad of memecoins</title>
+<meta name="description" content="$POPTROLL — what happens when Popcat and Troll have an unholy child on Solana. ngmi if you miss this." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Bungee&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- Grain overlay -->
+<div class="grain"></div>
+
+<!-- Floating troll emojis spawned by JS -->
+<div id="troll-field" aria-hidden="true"></div>
+
+<!-- Marquee top -->
+<div class="marquee marquee--top">
+  <div class="marquee__track">
+    <span><img src="poptroll.gif" class="marquee__gif" alt=""> $POPTROLL <img src="poptroll.gif" class="marquee__gif" alt=""> ZERO UTILITY <img src="poptroll.gif" class="marquee__gif" alt=""> MAXIMUM VIBES <img src="poptroll.gif" class="marquee__gif" alt=""> CA: COMING SOON <img src="poptroll.gif" class="marquee__gif" alt=""> $POPTROLL <img src="poptroll.gif" class="marquee__gif" alt=""> PROBLEM? <img src="poptroll.gif" class="marquee__gif" alt=""> ZERO UTILITY <img src="poptroll.gif" class="marquee__gif" alt=""> MAXIMUM VIBES <img src="poptroll.gif" class="marquee__gif" alt=""> CA: COMING SOON <img src="poptroll.gif" class="marquee__gif" alt=""> PROBLEM? <img src="poptroll.gif" class="marquee__gif" alt=""></span>
+    <span><img src="poptroll.gif" class="marquee__gif" alt=""> $POPTROLL <img src="poptroll.gif" class="marquee__gif" alt=""> ZERO UTILITY <img src="poptroll.gif" class="marquee__gif" alt=""> MAXIMUM VIBES <img src="poptroll.gif" class="marquee__gif" alt=""> CA: COMING SOON <img src="poptroll.gif" class="marquee__gif" alt=""> $POPTROLL <img src="poptroll.gif" class="marquee__gif" alt=""> PROBLEM? <img src="poptroll.gif" class="marquee__gif" alt=""> ZERO UTILITY <img src="poptroll.gif" class="marquee__gif" alt=""> MAXIMUM VIBES <img src="poptroll.gif" class="marquee__gif" alt=""> CA: COMING SOON <img src="poptroll.gif" class="marquee__gif" alt=""> PROBLEM? <img src="poptroll.gif" class="marquee__gif" alt=""></img></span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__logo">$POPTROLL</div>
+  <ul class="nav__links">
+    <li><a href="#tokenomics">tokenomics*</a></li>
+    <li><a href="#roadmap">roadmap†</a></li>
+    <li><a href="#how">how to buy</a></li>
+    <li><a href="#community">twitter</a></li>
+  </ul>
+  <a href="#buy" class="nav__cta" id="navCta">BUY NOW</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero__bg"></div>
+
+  <div class="hero__content">
+    <p class="hero__eyebrow">solana // memecoin // unaudited and proud</p>
+    <h1 class="hero__title">
+      <span class="word" data-text="POP">POP</span><span class="word word--troll" data-text="TROLL">TROLL</span>
+    </h1>
+    <p class="hero__tagline">
+      what if <strong>popcat</strong> and <strong>troll</strong> had a baby<br/>
+      and that baby was <em>completely worthless</em>?
+    </p>
+
+    <div class="hero__cta">
+      <button class="btn-pop" id="popBtn">
+        <span class="btn-pop__label">CLICK TO POP</span>
+        <span class="btn-pop__count">pops: <span id="popCount">0</span></span>
+      </button>
+      <a href="#how" class="btn-ghost">how to ape →</a>
+    </div>
+
+    <p class="hero__small">not financial advice. not advice in general. probably a mistake.</p>
+  </div>
+
+  <div class="hero__pfp">
+    <div class="pfp-frame">
+      <img src="poptroll.gif" alt="POPTROLL pfp" id="pfpImg" onerror="this.style.display='none';document.getElementById('pfpFallback').style.display='flex'" />
+      <div class="pfp-fallback" id="pfpFallback">
+        <div class="pfp-fallback__face">😼</div>
+        <div class="pfp-fallback__face pfp-fallback__face--2">🐸</div>
+        <div class="pfp-fallback__text">drop poptroll.gif here</div>
+      </div>
+    </div>
+    <div class="pfp-orbit pfp-orbit--1"></div>
+    <div class="pfp-orbit pfp-orbit--2"></div>
+  </div>
+</header>
+
+<!-- STATS BAR -->
+<section class="stats">
+  <div class="stat"><span class="stat__num" data-target="69420">0</span><span class="stat__label">holders (cope)</span></div>
+  <div class="stat"><span class="stat__num">∞</span><span class="stat__label">delusion</span></div>
+  <div class="stat"><span class="stat__num">0</span><span class="stat__label">utility</span></div>
+  <div class="stat"><span class="stat__num" data-target="100">0</span><span class="stat__label">% memecoin</span></div>
+</section>
+
+<!-- TOKENOMICS -->
+<section class="section" id="tokenomics">
+  <h2 class="section__title">tokenomics<span class="aster">*</span></h2>
+  <p class="section__sub"><span class="aster">*</span>we made these up. they're not real. nothing is real.</p>
+
+  <div class="tokenomics-grid">
+    <div class="tk-card">
+      <div class="tk-card__big">100%</div>
+      <div class="tk-card__label">supply</div>
+      <div class="tk-card__joke">"wow innovative"</div>
+    </div>
+    <div class="tk-card tk-card--accent">
+      <div class="tk-card__big">0%</div>
+      <div class="tk-card__label">tax</div>
+      <div class="tk-card__joke">we're not greedy. we're stupid.</div>
+    </div>
+    <div class="tk-card">
+      <div class="tk-card__big">LP</div>
+      <div class="tk-card__label">burned</div>
+      <div class="tk-card__joke">like our portfolios</div>
+    </div>
+    <div class="tk-card tk-card--accent">
+      <div class="tk-card__big">🐸</div>
+      <div class="tk-card__label">contract renounced</div>
+      <div class="tk-card__joke">no devs, no problems, no exit liquidity</div>
+    </div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section section--dark" id="roadmap">
+  <h2 class="section__title">roadmap<span class="aster">†</span></h2>
+  <p class="section__sub"><span class="aster">†</span>"roadmap" is a strong word. think of it more as a wishlist.</p>
+
+  <div class="roadmap">
+    <div class="rm-phase">
+      <div class="rm-phase__num">PHASE 1</div>
+      <ul>
+        <li>launch</li>
+        <li>tell mom</li>
+        <li>refresh chart 400 times</li>
+      </ul>
+    </div>
+    <div class="rm-phase">
+      <div class="rm-phase__num">PHASE 2</div>
+      <ul>
+        <li>get listed on coingecko</li>
+        <li>get rugged by coingecko (jk)</li>
+        <li>billboard in times square (in minecraft)</li>
+      </ul>
+    </div>
+    <div class="rm-phase">
+      <div class="rm-phase__num">PHASE 3</div>
+      <ul>
+        <li>flip $TROLL</li>
+        <li>flip popcat</li>
+        <li>flip dogecoin</li>
+        <li>flip a real estate property</li>
+      </ul>
+    </div>
+    <div class="rm-phase rm-phase--final">
+      <div class="rm-phase__num">PHASE ∞</div>
+      <ul>
+        <li>???</li>
+        <li>profit</li>
+        <li>retire on a yacht next to the popcat</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO BUY -->
+<section class="section" id="how">
+  <h2 class="section__title">how to ape</h2>
+  <p class="section__sub">a step by step guide for the financially unwell</p>
+
+  <ol class="how">
+    <li>
+      <span class="how__step">01</span>
+      <h3>get a wallet</h3>
+      <p>download Phantom. yes it's free. no it won't store your dignity.</p>
+    </li>
+    <li>
+      <span class="how__step">02</span>
+      <h3>get some SOL</h3>
+      <p>buy SOL from any exchange. send it to phantom. ignore the part where you should DCA.</p>
+    </li>
+    <li>
+      <span class="how__step">03</span>
+      <h3>swap for $POPTROLL</h3>
+      <p>head to Jupiter or Raydium. paste the contract. swap. close the tab. don't look for 6 months.</p>
+    </li>
+    <li>
+      <span class="how__step">04</span>
+      <h3>???</h3>
+      <p>this step is intentionally blank. you'll know what to do.</p>
+    </li>
+  </ol>
+</section>
+
+<!-- CONTRACT BAR -->
+<section class="ca-bar">
+  <span class="ca-bar__label">contract address:</span>
+  <code id="ca">CA_GOES_HERE_AFTER_WE_LAUNCH_ser</code>
+  <button class="ca-bar__copy" id="copyBtn">copy</button>
+</section>
+
+<<!-- COMMUNITY -->
+<section class="section" id="community">
+  <h2 class="section__title">join the cult</h2>
+  <p class="section__sub">one link. one cult. zero exit liquidity.</p>
+  <div class="socials socials--solo">
+    <a href="#" class="social social--big" target="_blank" rel="noopener">
+      <div class="social__icon">𝕏</div>
+      <div class="social__name">follow on twitter</div>
+      <div class="social__desc">cope, seethe, and rt the troll face</div>
+    </a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <p class="footer__main">$POPTROLL // 2026 // built different (badly)</p>
+  <p class="footer__disclaimer">
+    $POPTROLL is a memecoin with no intrinsic value or expectation of financial return. there is no formal team or roadmap.
+    the coin is completely useless and for entertainment purposes only. if you bought this thinking it would change your life,
+    we're flattered, but also concerned. dyor. wagmi. ngmi. it's all the same in the end.
+  </p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
